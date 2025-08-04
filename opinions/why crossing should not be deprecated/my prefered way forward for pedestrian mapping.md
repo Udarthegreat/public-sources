@@ -53,6 +53,8 @@ For the next example let's look at lowered curbs(as ways):
 
 Before we continue to my arguments for or against various tags, I would like to point out that the identifier tags form an n-leaf tree. For visualization purposes, I have created a graphic of the tree that I tried to put all the tags I know of for ways (it’s missing vertex, area, and relation tags since those are essentially different trees that work slightly differently, so they aren’t all that relevant to what I’m writing here), but I may have missed some lesser-known ones that I wasn't aware of, so feel free to notify me if I missed any. As a final note here, I would like to explain why I put a "void" tag at the top of the tree. This is relatively simple, for increased readability/aesthetics. It is mainly there to further show and highlight just how much of a tree this forms, and we wouldn't want to break the tree (in my opinion)(hint, hint). I called the "tag" at the top of the tree void because, as with the "void", it's empty but still is "something" and IRL doesn't exist.
 
+![the OSM tree of tags.drawio](the%20OSM%20tree%20of%20tags.drawio.svg)
+
 ## crossings
 
 The tagging of crossings is the place where I, from my understanding, have the biggest differences in how I see the tagging schema and where I would like it to go, so I will start by putting forward my simpler, and hopefully less controversial opinions first, and the big substantially more controversial, and larger in effect last. Ever since the introduction of `crossing:markings=*` I have felt like there have been some inconsistencies between various tags. So I am writing this to put forth my thoughts on how all of this can be harmonized.
