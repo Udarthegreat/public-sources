@@ -25,6 +25,8 @@ Please add all pedestrian features as separate geometry and as mentioned above t
  - if you come across a scenario were there is a sidewalk on either side of a road and it is fairly obvious that you could cross there add a `highway=footway` + `informal=yes` on either side of the road connecting to an unmarked crossings across the road
  - while I do not see the addition of kerb vertices as required for this project, if you do please add the following tags at minimum `barrier=kerb` + `kerb=*` + `tactile_paving=*`
 
+If you are new to editing OpenStreetMap, this tutorial will help you get started using the iD editor. It's particularly important to learn how to use the imagery offset adjustment in the "Background Settings" menu. 
+
 One last Note here, if you initially mapped an area please refrain from validating areas you added so that we can have at least two pairs of eyes on any one area although if it eventually becomes obvious that this will not be possible feel free to do so, though only evaluate this request once the open tasks get close to complete. 
 
 **Changeset comment**:#osmus-tasks-876 #Miami-Dade-projects Adding pedestrian features in Miami Dade County (#1)
