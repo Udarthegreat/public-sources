@@ -38,7 +38,7 @@ The following are the tags I would like to see for crossing ways:
 
 Please DO NOT add `crossing:signals=*` (as I feel the tag is [duplicate](https://hackmd.io/@Udarian/BJLgxU1HJg)) if at all possible (aka unless your editor is auto adding these like Rapid does, please don't add them of your own volition, please).
 
-As for geometry, a crossing way (mapped separately) should only touch the sidewalk center line if the sidewalk doesn't not go completely around the block and ends at a road area with a crossing, in every other case there should be a sidewalk way (for now) connecting the centerline to the crossing. NOTE: please watch out for crossings that have markings but the crossing way cannot be mapped through the centerline of the crossing markings because of were the sidewalk connects, in those casses please just connect to the sidewalk as mentioned above.
+As for geometry, a crossing way (mapped separately) should only touch the sidewalk center line if the sidewalk doesn't not go completely around the block and ends at a road area with a crossing, in every other case there should be a sidewalk way (for now) connecting the centerline to the crossing. NOTE: please watch out for crossings that have markings but the crossing way cannot be mapped through the centerline of the crossing markings because of were the sidewalks connect on either side of the crossing, in those cases please just connect to the sidewalk as mentioned above.
 
 crossings mapped as vertices should have the following tags:
 
