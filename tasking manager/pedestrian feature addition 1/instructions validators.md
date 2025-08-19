@@ -85,3 +85,5 @@ Generally, if a kerb vertex is not at the end of a way you likely need to split 
 For any other tags, for any of the above, add at your own leisure unless I specifically mentioned not adding the tag.
 
 One last Note here, if you initially mapped an area please refrain from validating areas you added so that we can have at least two pairs of eyes on any one area although if it eventually becomes obvious that this will not be possible feel free to do so, though only evaluate this request once the open tasks get close to complete. 
+
+**Changeset comment**:#osmus-tasks-876 #Miami-Dade-projects Adding pedestrian features in Miami Dade County (1)
