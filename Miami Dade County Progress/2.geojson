@@ -1510,7 +1510,8 @@
 				"building": "2023",
 				"footway:basic": "2023",
 				"building:part": "2025",
-				"indoor": "2025"
+				"indoor": "2025",
+				"footway:way": "2024"
 			},
 			"geometry": {
 				"coordinates": [
