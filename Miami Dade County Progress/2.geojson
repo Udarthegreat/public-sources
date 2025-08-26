@@ -842,6 +842,7 @@
 			"type": "Feature",
 			"properties": {
 				"road": "2023",
+				"sidewalk": "2023",
 				"crossings:bronze": "2023",
 				"crossings:silver:basic": "2023"
 			},
@@ -1418,7 +1419,7 @@
 			"id": "hdiW7L3A30BDnJWcj2fDhWGZnJErg7rX",
 			"type": "Feature",
 			"properties": {
-				"road": "2023",
+				"road": "2025",
 				"sidewalk": "2025",
 				"crossings:bronze": "2025",
 				"crossings:silver:basic": "2025"
