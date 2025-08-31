@@ -1,0 +1,13 @@
+/*
+Finds all the correctly formatted addresses in the viewport (will only work in the US as I only intend to use this in Miami Dade County but should be able to run nation wide)
+*/
+
+[out:json][timeout:25];
+// gather results
+nwr["addr:housenumber" ~ "^[0-9]+$"]
+    ["addr:street"]
+    ["addr:city"]
+    ["addr:state"]
+    ["addr:postcode"~"^[0-9]{5}(-[0-9]{4})?$"]({{bbox}});
+// print results
+out geom;
