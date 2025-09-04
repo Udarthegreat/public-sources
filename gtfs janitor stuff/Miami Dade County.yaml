@@ -1,0 +1,53 @@
+name: "Miami Dade County (Florida, USA)"
+
+
+# the bus stops in Miami Dade County can be missing `operator` and `network` tags and only consistently have `public_transport=stop_position` and `bus=yes`
+candidateNodeFilter: |
+    (
+        (
+        $not($exists($v.tags.public_transport)) or
+        $v.tags.public_transport != "stop_position"
+        )
+        or
+        (
+        /* We *do* want public_transport=stop_position for other modes of transport, like tram and rail */
+        $not($exists($v.tags.bus)) or
+        $v.tags.bus = "no"
+        )
+    )
+
+# the bus stops in Miami Dade County can be missing `operator` and `network` tags and only consistently have `public_transport=stop_position` and `bus=yes`
+disusedStopFilter: |
+    $contains($v.tags.public_transport, "stop_position") or
+    $contains($v.tags.bus, "yes") 
+
+stopTags:
+    network=MDT
+    network:wikidata=Q6317384
+    name: "{{ stop_name | title }}"
+    ref={{ stop_id }}
+    operator = Miami-Dade Transit
+    operator:short: "MDT"
+    # operator:wikidata: "Q6411393"
+    # operator:wikipedia: "en:King County Metro"
+    # gtfs:feed: "US-WA-KCM"
+
+# gtfsOverrides:
+#     routes:
+#         # Trolleybus route overrides
+#         100001: { route_type: "11" } # Route 1
+#         100089: { route_type: "11" } # Route 2
+#         100173: { route_type: "11" } # Route 3
+#         100219: { route_type: "11" } # Route 4
+#         100263: { route_type: "11" } # Route 7
+#         100002: { route_type: "11" } # Route 10
+#         100018: { route_type: "11" } # Route 12
+#         100028: { route_type: "11" } # Route 13
+#         100039: { route_type: "11" } # Route 14
+#         100210: { route_type: "11" } # Route 36
+#         100223: { route_type: "11" } # Route 43
+#         100224: { route_type: "11" } # Route 44
+#         100447: { route_type: "11" } # Route 49
+#         100264: { route_type: "11" } # Route 70
+#     stops:
+#         68498: { stop_name: "Redmond Technology Station - Bay 8" }

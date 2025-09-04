@@ -4016,7 +4016,30 @@
 		{
 			"id": "d3BvVyIHpC6UFRRBzdwP0tYkAEpFn3Y2",
 			"type": "Feature",
-			"properties": {},
+			"properties": {
+				"road": "true",
+				"signs:traffic:stop:public": "true",
+				"signs:traffic:yield:public": "true",
+				"signs:traffic:traffic_light:public": "true",
+				"sidewalk": "true",
+				"footway:minor:partial": "true",
+				"crossings:bronze": "true",
+				"crossings:silver:basic": "true",
+				"crossings:silver": "false",
+				"crossings:gold": "false",
+				"crossings:diamond": "false",
+				"building:updated": "false",
+				"building:in": "true",
+				"public_transit:in": "true",
+				"public_transit:updated": "false",
+				"kerb:vertex": "false",
+				"kerb:way": "false",
+				"rail": "false",
+				"barrier:partial": "true",
+				"land_use:partial": "true",
+				"business": "false",
+				"business:partial": "true"
+			},
 			"geometry": {
 				"coordinates": [
 					[
