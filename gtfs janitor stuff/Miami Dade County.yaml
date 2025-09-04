@@ -22,12 +22,12 @@ disusedStopFilter: |
     $contains($v.tags.bus, "yes") 
 
 stopTags:
-    network=MDT
-    network:wikidata=Q6317384
-    name: "{{ stop_name | title }}"
-    ref={{ stop_id }}
-    operator = Miami-Dade Transit
+    operator: "Miami-Dade Transit"
     operator:short: "MDT"
+    name: "{{ stop_name | title }}"
+    ref: "{{ stop_id }}"
+    network: "MDT"
+    network:wikidata: "Q6317384"
     # operator:wikidata: "Q6411393"
     # operator:wikipedia: "en:King County Metro"
     # gtfs:feed: "US-WA-KCM"
