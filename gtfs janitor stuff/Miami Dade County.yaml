@@ -2,6 +2,7 @@ name: "Miami Dade County (Florida, USA)"
 
 
 # the bus stops in Miami Dade County can be missing `operator` and `network` tags and only consistently have `public_transport=stop_position` and `bus=yes`
+# TODO: look into creating a better filter for miami dade as allot of issues popped up in the test run
 candidateNodeFilter: |
     (
         (
@@ -21,6 +22,7 @@ disusedStopFilter: |
     $contains($v.tags.public_transport, "stop_position") or
     $contains($v.tags.bus, "yes") 
 
+# TODO: possibly use `operator:guid` instead of `gtfs:feed`
 stopTags:
     operator: "Miami-Dade Transit"
     operator:short: "MDT"
@@ -28,26 +30,15 @@ stopTags:
     ref: "{{ stop_id }}"
     network: "MDT"
     network:wikidata: "Q6317384"
-    # operator:wikidata: "Q6411393"
-    # operator:wikipedia: "en:King County Metro"
-    # gtfs:feed: "US-WA-KCM"
+    gtfs:feed: "US-FL-MDT"
 
-# gtfsOverrides:
-#     routes:
-#         # Trolleybus route overrides
-#         100001: { route_type: "11" } # Route 1
-#         100089: { route_type: "11" } # Route 2
-#         100173: { route_type: "11" } # Route 3
-#         100219: { route_type: "11" } # Route 4
-#         100263: { route_type: "11" } # Route 7
-#         100002: { route_type: "11" } # Route 10
-#         100018: { route_type: "11" } # Route 12
-#         100028: { route_type: "11" } # Route 13
-#         100039: { route_type: "11" } # Route 14
-#         100210: { route_type: "11" } # Route 36
-#         100223: { route_type: "11" } # Route 43
-#         100224: { route_type: "11" } # Route 44
-#         100447: { route_type: "11" } # Route 49
-#         100264: { route_type: "11" } # Route 70
-#     stops:
-#         68498: { stop_name: "Redmond Technology Station - Bay 8" }
+# TODO: look into whether or not I need to add any stop overrides (likely will need to at Dadeland South and the other metrorail and metromover stops)
+gtfsOverrides:
+    routes:
+        # rail routes overrides
+        14457: { route_type: "12" } # METROMOVER INNER LOOP
+        14456: { route_type: "12" } # METROMOVER OMNI/BRICKELL OUTER LOOP
+        14458: { route_type: "12" } # AIRPORT PEOPLE MOVER
+        30315: { route_type: "2" } # All of METRORAIL (doesn't distinguish between green and orange)
+    # stops:
+    #     68498: { stop_name: "Redmond Technology Station - Bay 8" }
