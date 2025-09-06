@@ -1512,7 +1512,15 @@
 				"footway:basic": "2023",
 				"building:part": "2025",
 				"indoor": "2025",
-				"footway:way": "2024"
+				"footway:way": "2024",
+				"road": "2023",
+				"road:area": "2025",
+				"footway:area": "2025",
+				"kerb:vertex": "2024",
+				"kerb:way": "2025",
+				"POI": "2025",
+				"parking": "2023",
+				"parking_space": "2025"
 			},
 			"geometry": {
 				"coordinates": [
