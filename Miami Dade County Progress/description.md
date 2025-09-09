@@ -6,8 +6,13 @@ version: 0.1.0
 
 # Miami Dade County Progress
 
+Again, just to reiterate in here, this is all very much a work in progress so some areas may not be filled in for a bit, as I work on this.
+
 ## files
 
+ - [what I have done and where](/Miami%20Dade%20County%20Progress/1.geojson), this file contains what has been done and to what level of detail and what still needs doing, for more details on the tags used here see the section below.
+ - [when I did it and future plans](/Miami%20Dade%20County%20Progress/2.geojson), this file contains areas that show what I have done up to this point and what I am planning to do and by when, again see the section below for more details on the tags.
+ - [minor notes about smaller fixes](/Miami%20Dade%20County%20Progress/3.geojson), a file with some notes for minor fixes that need doing while the rest of the data is good in the area.
  - ~
 
 ## tag descriptions

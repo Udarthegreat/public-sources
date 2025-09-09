@@ -1,0 +1,69 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"id": "UkhlU4bsqTeWO0CF8bgcWLgwsNRYajmy",
+			"type": "Feature",
+			"properties": {
+				"dual_carriageway:partial": "start"
+			},
+			"geometry": {
+				"coordinates": [
+					-80.30139192719763,
+					25.69092331030261
+				],
+				"type": "Point"
+			}
+		},
+		{
+			"id": "YcYhWVWU5shVd5AwzDBe5v29m8CVCS84",
+			"type": "Feature",
+			"properties": {
+				"dual_carriageway:partial": "end"
+			},
+			"geometry": {
+				"coordinates": [
+					-80.30245129975368,
+					25.69002075407535
+				],
+				"type": "Point"
+			}
+		},
+		{
+			"id": "wcE7jEvgu3L0cxQ7rDoQ6qZVXWindfbU",
+			"type": "Feature",
+			"properties": {
+				"dual_carriageway:partial": "yes"
+			},
+			"geometry": {
+				"coordinates": [
+					[
+						-80.30245129975368,
+						25.69002075407535
+					],
+					[
+						-80.30220614898754,
+						25.690232545004363
+					],
+					[
+						-80.30192930225712,
+						25.690427261481204
+					],
+					[
+						-80.30168284114416,
+						25.690620456421343
+					],
+					[
+						-80.30150896797907,
+						25.69078474762935
+					],
+					[
+						-80.30139192719763,
+						25.69092331030261
+					]
+				],
+				"type": "LineString"
+			}
+		}
+	]
+}
