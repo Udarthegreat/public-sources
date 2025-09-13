@@ -8,6 +8,7 @@ TODO: add colors to bike paths (and bike and foot paths as separate colors).
 TODO: differentiate between cycleways mapped separately and those just tagged on roads.
 TODO: crossings as vertexes.
 TODO: add kerb=*, tactile_paving=*, and crossing:island=* as tags that should not be on crossing ways.
+TODO: add access aisles including access_aisle:markings=* tag
 */
 [out:json][timeout:25];
 (
