@@ -1,5 +1,4 @@
 ---
-draft: 0
 complete: true
 version: 1.0.0
 ---

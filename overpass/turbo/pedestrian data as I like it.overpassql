@@ -9,6 +9,7 @@ TODO: differentiate between cycleways mapped separately and those just tagged on
 TODO: crossings as vertexes.
 TODO: add kerb=*, tactile_paving=*, and crossing:island=* as tags that should not be on crossing ways.
 TODO: add access aisles including access_aisle:markings=* tag
+TODO: add crossing:signed to crossings
 */
 [out:json][timeout:25];
 (
