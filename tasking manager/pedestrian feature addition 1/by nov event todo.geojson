@@ -2197,7 +2197,7 @@
 			"id": "z3IMrmepbozwJy4MivxGgMLM9h7iK7Ra",
 			"type": "Feature",
 			"properties": {
-				"todo": "true"
+				"todo": "false"
 			},
 			"geometry": {
 				"coordinates": [
