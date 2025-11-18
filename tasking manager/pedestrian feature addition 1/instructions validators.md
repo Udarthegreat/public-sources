@@ -5,13 +5,13 @@ version: 1.0.0
 
 # Miami sidewalk additions #1
 
-The goal here is to complete a first pass through adding the pedestrian features throughout this area. Below, I have described what tagging and geometry conventions I would like to see present by the end of this pass, and what [I](https://www.openstreetmap.org/user/Udarian) feel can be left for the future, though if in your own contributions you'd like to add other tags, feel free, as they will have to be added eventually. There will be future passes to do, but those are for the future since it's better to have something rather than nothing, and adding values like lit=* can be done relatively easily once the ways are already mapped.
+The goal here is to complete the a first pass of adding the pedestrian features throughout this area, this is only a first pass though. Below, I have described what tagging and geometry conventions I would like to see present by the end of this pass (by the time validation is complete), and what [I](https://www.openstreetmap.org/user/Udarian) feel can be left for the future, though if in your own contributions you'd like to add other tags, feel free, as they will eventually have to be added. There will be future passes to do, but those are for the future since it's better to have something rather than nothing, and adding values like lit=* can be done relatively easily once the ways are already separately mapped.
 
 Below are my guidelines for how I would like the pedestrian features in the area to be mapped by the end of validation but if you are newer to mapping pedestrian features feel free to map to a lower level of detail, though I would challenge you to try and go to higher level of detail at least once as to improve as a mapper.
 
 ## Imagery sources to be used
 
-Please use "Bing Maps Aerial" imagery for tracing as it is the most up to date in this part of Miami Dade County at the moment. There are some areas that have extremely high tree cover and thus can be complicated to map correctly, essentially requiring street side imagery to do correctly, in those areas the "Esri World Imagery" tends to be the best and what the roads are aligned to it.These areas with extremely high tree cover can be found in the following [geojson](/tasking%20manager/pedestrian%20feature%20addition%201/heavy%20tree%20cover.geojson) file, if you feel like it is to large and should be expanded feel free to reach out and I will change its shape if need be. The "Miami-Dade County Orthoimagery (Latest)" imagery is also decently good and it may be updated in the future with the new 2025 imagery from the county but at the moment it uses the 2024 imagery. The "Bing Streetside" imagery is another good source of info along with the Mapillary Traffic Signs and Map Features, though ensure that you check the Mapillary Traffic Signs and Map Features against Bing Streetside if they seem at all fishy and or conflict with the already mapped features in the area as the Bing Streetside is newer generally. As previously mentioned there is new 2025 imagery but it is not on the same url as the existing "Miami-Dade County Orthoimagery (Latest)" imagery, you can add it to iD as a custom imagery url and even to JOSM. For iD you paste the following WMS url into the custom imagery box in iD:
+Please use "Bing Maps Aerial" imagery for tracing as it is the most up to date in this part of Miami Dade County at the moment. There are some areas that have extremely high tree cover and thus can be complicated to map correctly, essentially requiring street side imagery to do correctly, in those areas the "Esri World Imagery" tends to be the best (as it is slightly higher resolution) and what the roads in the area are aligned to. a rough description of the this area with extremely high tree cover can be found in the following [geojson](/tasking%20manager/pedestrian%20feature%20addition%201/heavy%20tree%20cover.geojson) file, if you feel like it is to large and should be expanded feel free to reach out and I will change its shape if need be. The "Miami-Dade County Orthoimagery (Latest)" imagery is also decently good and it may be updated in the future with the new 2025 imagery from the county but at the moment it uses the 2024 imagery. The "Bing Streetside" imagery is another good source of info along with the Mapillary Traffic Signs and Map Features, though ensure that you check the Mapillary Traffic Signs and Map Features against Bing Streetside if they seem at all fishy and or conflict with the already mapped features in the area as the Bing Streetside is newer generally. As previously mentioned there is new 2025 imagery but it is not on the same url as the existing "Miami-Dade County Orthoimagery (Latest)" imagery, you can add it to iD as a custom imagery url and even to JOSM. For iD you paste the following WMS url into the custom imagery box in iD:
 
 ```
 https://imageserverintra.miamidade.gov/arcgis/rest/services/Woolpert2025/ImageServer/exportImage?f=image&bbox={bbox}&bboxSR={wkid}&imageSR={wkid}&size={width},{height}
@@ -24,6 +24,8 @@ https://imageserverintra.miamidade.gov/arcgis/services/Woolpert2025/ImageServer/
 ```
 
 ## Footways:
+
+As a general guideline try and map the geometry to [PWG the silver tier](https://wiki.openstreetmap.org/wiki/Foundation/Local_Chapters/United_States/Pedestrian_Working_Group/Schema). In essence this means that pedestrian features should be mapped as separate geometry.
 
 ### Sidewalks:
 
@@ -43,7 +45,7 @@ The following are the tags I would like to see for crossing ways:
  - `highway=footway` + `footway=crossing` 
  - `crossing=unmarked`, `uncontrolled`, and `traffic_signals`, please do not use `crossing=marked` or other variants.
  - `crossing:markings=*` (note, if there are markings, please try and find a value more specific than `yes`)
- - `surface=*` on way crossings, not the vertices
+ - `surface=*` on way crossings, not the vertices (at least for now as that does not seem to be consensus at this point)
 
 Please DO NOT add `crossing:signals=*` (as I feel the tag is [duplicate](https://hackmd.io/@Udarian/BJLgxU1HJg)) if at all possible (aka unless your editor is auto adding these like Rapid does, please don't add them of your own volition, please).
 
@@ -70,26 +72,26 @@ NOTE: These should be mapped as geometry and not tagged on the crossing ways and
 The preferred tags here are as follows:
 
  - `highway=footway` + `footway=access_aisle`
- - `access_aisle:markings=*` (same as `crossing:markings=*` for values) (this is a more detailed tag so it can be left for validation)
+ - `access_aisle:markings=*` (same as `crossing:markings=*` for values)
  - `surface=*`
 
-As for geometry, the access aisle should only be mapped within the area that is marked, aka if the painted area does not go to the center line, add a `footway=link` to connect from where the access aisle ends to the road centerline.
+As for geometry, the access aisle should only be mapped within the area that is marked, aka if the painted area does not go to the center line of the road, add a `footway=link` to connect from where the access aisle ends to the road centerline.
 
 ### General footpaths:
 
 This really varies since there are quite a few cases where other `footway=*` values aren’t applicable but `highway=footway` is still warranted, I have included some examples where I have thoughts below. The first is the case were, at some road intersections there are sidewalk centerline's on either side of the road but on one or both of the sides of the road there is no sidewalk connecting to the road, here there should be a `highway=footway` + `informal=yes` way connecting to the road and a crossing between the two sides of the road. I have attached an image of the above below:
 
-![iD screen shot of what todo](/tasking%20manager/pedestrian%20feature%20addition%201/informal%20footway%20how%20to.png)
+![iD screen shot of how I would like the informal foot connectors be mapped](/tasking%20manager/pedestrian%20feature%20addition%201/informal%20footway%20how%20to.png)
 
 ### Kerbs:
 
-The following are the minimum tags I would like to see on any existing and newly added kerbs (as vertices), though I do not consider adding these as part of this task, so only add if you feel it necessary:
+The following are the minimum tags I would like to see on any existing and newly added kerbs (as vertices), though I do not consider adding these as part of this task, so only add these if you feel that it's necessary (they will be added eventually):
 
  - `barrier=kerb`
- - `kerb=*` please do not add kerb tags to crossings.
+ - `kerb=*` (please do not add kerb tags to crossings).
  - `tactile_paving=yes` or `no` (if it's `no`, still add the tag), please do not add tactile paving tags to crossings.
 
-Generally, if a kerb vertex is not at the end of a way you likely need to split the crossing way. 
+**Generally**, if a kerb vertex is not at the end of a way you likely need to split the crossing way. 
 
 For any other tags, for any of the above, add at your own leisure unless I specifically mentioned not adding the tag.
 
