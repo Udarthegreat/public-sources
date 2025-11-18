@@ -11,7 +11,17 @@ Below are my guidelines for how I would like the pedestrian features in the area
 
 ## Imagery sources to be used
 
-Please use "Bing Maps Aerial" imagery for tracing as it is the most up to date in this part of Miami Dade County at the moment. There are some areas that have extremely high tree cover and thus can be complicated to map correctly, essentially requiring street side imagery to do correctly, in those areas the "Esri World Imagery" tends to be the best and what the roads are aligned to it.These areas with extemely high tree cover can be found in the following [geojson](/tasking%20manager/pedestrian%20feature%20addition%201/heavy%20tree%20cover.geojson) file, if you feel like it is to large and should be expanded feel free to reach out and I will change its shape if need be. The "Miami-Dade County Orthoimagery (Latest)" imagery is also decently good and it will likely be updating some point in mid August so at that point check it before committing to ensure that nothing has changed in the task you are mapping. The "Bing Streetside" imagery is another good source of info along with the Mapillary Traffic Signs and Map Features.
+Please use "Bing Maps Aerial" imagery for tracing as it is the most up to date in this part of Miami Dade County at the moment. There are some areas that have extremely high tree cover and thus can be complicated to map correctly, essentially requiring street side imagery to do correctly, in those areas the "Esri World Imagery" tends to be the best and what the roads are aligned to it.These areas with extremely high tree cover can be found in the following [geojson](/tasking%20manager/pedestrian%20feature%20addition%201/heavy%20tree%20cover.geojson) file, if you feel like it is to large and should be expanded feel free to reach out and I will change its shape if need be. The "Miami-Dade County Orthoimagery (Latest)" imagery is also decently good and it may be updated in the future with the new 2025 imagery from the county but at the moment it uses the 2024 imagery. The "Bing Streetside" imagery is another good source of info along with the Mapillary Traffic Signs and Map Features, though ensure that you check the Mapillary Traffic Signs and Map Features against Bing Streetside if they seem at all fishy and or conflict with the already mapped features in the area as the Bing Streetside is newer generally. As previously mentioned there is new 2025 imagery but it is not on the same url as the existing "Miami-Dade County Orthoimagery (Latest)" imagery, you can add it to iD as a custom imagery url and even to JOSM. For iD you paste the following WMS url into the custom imagery box in iD:
+
+```
+https://imageserverintra.miamidade.gov/arcgis/rest/services/Woolpert2025/ImageServer/exportImage?f=image&bbox={bbox}&bboxSR={wkid}&imageSR={wkid}&size={width},{height}
+```
+
+For JOSM use the following GetCapabilities url:
+
+```
+https://imageserverintra.miamidade.gov/arcgis/services/Woolpert2025/ImageServer/WMSServer?request=GetCapabilities&service=WMS
+```
 
 ## Footways:
 
