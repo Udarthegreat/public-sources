@@ -1,6 +1,5 @@
 ---
 draft: 0
-posted: false
 version: 0.1.0
 note: very much WIP at the moment
 ---
