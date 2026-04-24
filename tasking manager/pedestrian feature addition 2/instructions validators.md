@@ -1,17 +1,18 @@
 ---
-complete: true
-version: 1.0.1
+draft: 0
+complete: false
+version: 0.9.0
 ---
 
-# Miami sidewalk additions #1
+# Miami sidewalk additions #2
 
 The goal here is to complete the [first pass for pedestrians](/my%20working%20definitions/Pass%20system/readme.md) throughout this area, this is only a first pass though. Below, [I](https://www.openstreetmap.org/user/Udarian) have described what tagging and geometry conventions I would like to see present by the end of this pass (by the time validation is complete), and what [I](https://www.openstreetmap.org/user/Udarian) feel can be left for the future, though if in your own contributions you'd like to add other tags, feel free, as they will eventually have to be added. There will be future passes to do (passes 2, 3 etc.), but those are for the future since it's better to have something rather than nothing, and adding values like `lit=*` can be done relatively easily once the ways are already separately mapped.
 
-Below are my guidelines for how I would like the pedestrian features in the area to be mapped by the end of validation but if you are newer to mapping pedestrian features feel free to map to a lower level of detail, though I would challenge you to try and go to higher level of detail at least once as to improve as a mapper.
+Below are my guidelines for how I would like the pedestrian features in the area to be mapped by the end of validation.
 
 ## Imagery sources to be used
 
-At the beginning of the project it was recommended that "Bing Maps Aerial" be used as the main aerial imagery in this area, that has now changed. At the around beginning of 2026 "Esri World Imagery" updated, it is mostly the same as the 2025 imagery from the county. The "Bing Maps Aerial" is still a good source though so you can still check against it, just know that there has been construction between the bing and esri so the bing may be out of date.  a rough description of the this area with extremely high tree cover can be found in the following [geojson](/tasking%20manager/pedestrian%20feature%20addition%201/heavy%20tree%20cover.geojson) file, if you feel like it is to large and should be expanded feel free to reach out and I will change its shape if need be. The "Miami-Dade County Orthoimagery (Latest)" imagery is also decently good and it may be updated in the future with the new 2025 imagery from the county but at the moment it uses the 2024 imagery. The "Bing Streetside" imagery is another good source of info along with the Mapillary Traffic Signs and Map Features, though ensure that you check the Mapillary Traffic Signs and Map Features against Bing Streetside if they seem at all fishy and or conflict with the already mapped features in the area as the Bing Streetside is newer generally. As previously mentioned there is new 2025 imagery from the county (that is now the same as the esri imagery) but it is not on the same url as the existing "Miami-Dade County Orthoimagery (Latest)" imagery, you can add it to iD as a custom imagery url and even to JOSM. For iD you paste the following WMS url into the custom imagery box in iD:
+This area should be mapped using "Esri World Imagery" as the main aerial imagery source but you can check your work against other imagery. As a note the "Esri World Imagery" is mostly the same as the 2025 imagery from the county (from my understanding it was taken on the first few days of Jan 2025). The "Bing Maps Aerial" is a good source so you can still check against it, just know that there has been construction between the bing and esri so the bing may be out of date. There are some areas that have extremely high tree cover and thus can be complicated to map correctly, essentially requiring street side imagery to do correctly, in those areas the "Esri World Imagery" tends to be the best and what the roads are aligned to in those specific areas (otherwise they are done to bing aerial). The "Miami-Dade County Orthoimagery (Latest)" imagery is also decently good though it wasn't updated with the 2025 imagery for some reason (from what I can tell). The "Bing Streetside" imagery is another good source of info along with the Mapillary Traffic Signs and Map Features. As previously mentioned there is new 2025 imagery from the county (that is now the same as the esri imagery) but it is not on the same url as the existing "Miami-Dade County Orthoimagery (Latest)" imagery, you can add it to iD as a custom imagery url and even to JOSM. For iD you paste the following WMS url into the custom imagery box in iD:
 
 ```text
 https://imageserverintra.miamidade.gov/arcgis/rest/services/Woolpert2025/ImageServer/exportImage?f=image&bbox={bbox}&bboxSR={wkid}&imageSR={wkid}&size={width},{height}
@@ -36,7 +37,7 @@ Below are the tags I would like to see on all sidewalks in this area by the end 
 
 It would be preferable if sidewalk tagging on roads is not done as I find it significantly easier to add all of that at once and will once the project is complete.
 
-As for geometry sidewalks (and more generally footways) should not touch road centerlines, so when a sidewalk goes directly up to a road, please split and add a `footway=link`, the exception here is `footway=crossing`.
+As for geometry sidewalks (and more generally footways), sidewalk centerline should not touch road centerline's, so when a sidewalk goes directly up to a road, please split and add a `footway=link`, the exception here is `footway=crossing`.
 
 ### Crossings:
 
@@ -95,4 +96,6 @@ For any other tags, for any of the above, add at your own leisure unless I speci
 
 One last Note here, if you initially mapped an area please refrain from validating areas you added so that we can have at least two pairs of eyes on any one area although if it eventually becomes obvious that this will not be possible feel free to do so, though only evaluate this request once the open tasks get close to complete. 
 
-**Changeset comment**:#osmus-tasks-876 #Miami-Dade-projects Adding and updating pedestrian features in Miami Dade County (1)
+**Changeset comment**: #Miami-Dade-projects Adding and updating pedestrian features in Miami Dade County (2)
+
+ - [ ] TODO: add `#osmus-tasks-###` to the before `#Miami-Dade-projects` in the changeset comment once the project on the tasking manager is created, where `###` is the number id of the project on the OSMUS tasking manager 

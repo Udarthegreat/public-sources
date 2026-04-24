@@ -1,7 +1,7 @@
 ---
 draft:10
 posted:true
-version:0.5.2
+version:0.6.0
 ---
 
 # My preferred way forward for pedestrian mapping
