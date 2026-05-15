@@ -1,6 +1,6 @@
 ---
 complete: true
-version: 1.0.1
+version: 1.0.2
 ---
 
 # Miami sidewalk additions #1
@@ -9,7 +9,7 @@ The goal here is to complete the [first pass for pedestrians](/my%20working%20de
 
 ## Imagery sources to be used
 
-At the beginning of the project it was recommended that "Bing Maps Aerial" be used as the main aerial imagery in this area, that has now changed. At the around beginning of 2026 "Esri World Imagery" updated, it is mostly the same as the 2025 imagery from the county. The "Bing Maps Aerial" is still a good source though so you can still check against it, just know that there has been construction between the bing and esri so the bing may be out of date. There are some areas that have extremely high tree cover and thus can be complicated to map correctly, essentially requiring street side imagery to do correctly, in those areas the "Esri World Imagery" tends to be the best and what the roads are aligned to in those specific areas (otherwise they are done to bing aerial). The "Miami-Dade County Orthoimagery (Latest)" imagery is also decently good though it wasn't updated with the 2025 imagery for some reason (from what I can tell). The "Bing Streetside" imagery is another good source of info along with the Mapillary Traffic Signs and Map Features.
+At the beginning of the project it was recommended that "Bing Maps Aerial" be used as the main aerial imagery in this area, that has now changed. At the around beginning of 2026 "Esri World Imagery" updated, it is mostly the same as the 2025 imagery from the county and is thus the latest and best imagery in the area. The "Bing Maps Aerial" is still a good source though so you can still check against it, just know that there has been construction between the bing and esri so the bing may be out of date. There are some areas that have extremely high tree cover and thus can be complicated to map correctly, essentially requiring street side imagery to do correctly, in those areas the "Esri World Imagery" tends to be the best and what the roads are aligned to in those specific areas (otherwise they are mostly done to bing aerial). The "Miami-Dade County Orthoimagery (Latest)" imagery is also decently good though it wasn't updated with the 2025 imagery for some reason (from what I can tell). The "Bing Streetside" imagery is another good source of info along with the Mapillary Traffic Signs and Map Features.
 
 ## Features
 
@@ -20,7 +20,7 @@ Please add all pedestrian features as separate geometry and as mentioned above t
  - each segment of a crossing should be its own way
  - if you feel comfortable doing so map refuge islands as separate geometry
  - please map access aisles as separate geometry
- - if a service or other road crosses a sidewalk please add `highway=crossing` on that vertex
+ - if a service or other road crosses a sidewalk please at minimum add `highway=crossing` on that vertex
  - if you come across a scenario were there is a sidewalk on either side of a road and it is fairly obvious that you could cross there add a `highway=footway` + `informal=yes` on either side of the road connecting to an unmarked crossings across the road (more detailed instructions about this in the validator instructions)
  - while I do not see the addition of kerb vertices as required for this project, if you do please add the following tags at minimum `barrier=kerb` + `kerb=*` + `tactile_paving=*`
 
