@@ -667,7 +667,7 @@
 			"properties": {
 				"ref": "10",
 				"complete": "false",
-				"complete:percent": "70"
+				"complete:percent": "99"
 			},
 			"geometry": {
 				"coordinates": [
@@ -739,7 +739,7 @@
 			"properties": {
 				"ref": "11",
 				"complete": "false",
-				"complete:percent": "70"
+				"complete:percent": "99"
 			},
 			"geometry": {
 				"coordinates": [
