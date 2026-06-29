@@ -503,7 +503,7 @@
 			"properties": {
 				"ref": "8",
 				"complete": "false",
-				"complete:percent": "85"
+				"complete:percent": "99"
 			},
 			"geometry": {
 				"coordinates": [
@@ -575,7 +575,7 @@
 			"properties": {
 				"ref": "9",
 				"complete": "false",
-				"complete:percent": "70"
+				"complete:percent": "95"
 			},
 			"geometry": {
 				"coordinates": [
