@@ -1,6 +1,5 @@
 name: "Miami Dade County (Florida, USA)"
 
-
 # the bus stops in Miami Dade County can be missing `operator` and `network` tags and only consistently have `public_transport=stop_position` and `bus=yes`
 # TODO: look into creating a better filter for miami dade as allot of issues popped up in the test run
 candidateNodeFilter: |
@@ -20,7 +19,7 @@ candidateNodeFilter: |
 # the bus stops in Miami Dade County can be missing `operator` and `network` tags and only consistently have `public_transport=stop_position` and `bus=yes`
 disusedStopFilter: |
     $contains($v.tags.public_transport, "stop_position") or
-    $contains($v.tags.bus, "yes") 
+    $contains($v.tags.bus, "yes")
 
 # TODO: possibly use `operator:guid` instead of `gtfs:feed`
 stopTags:
@@ -39,6 +38,6 @@ gtfsOverrides:
         14457: { route_type: "12" } # METROMOVER INNER LOOP
         14456: { route_type: "12" } # METROMOVER OMNI/BRICKELL OUTER LOOP
         14458: { route_type: "12" } # AIRPORT PEOPLE MOVER
-        30315: { route_type: "2" } # All of METRORAIL (doesn't distinguish between green and orange)
+        30979: { route_type: "2" } # All of METRORAIL (doesn't distinguish between green and orange)
     # stops:
     #     68498: { stop_name: "Redmond Technology Station - Bay 8" }
