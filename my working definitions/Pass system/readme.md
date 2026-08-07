@@ -6,35 +6,35 @@ note: very much WIP at the moment
 
 # Intro:
 
-This folder contains a formalization of the system and standards I map to, I reference to this in multiple other places so I have written it down here for reference. Wen mapping, I use a pass system, where each pass contains increasing levels of detail and information density. The following are the criteria I have for each pass at the moment, these will likely change a bit over time if my opinions change, though I will try to minimize the changes once this document reaches version `1.0.0`. It is important to note that my standards have changed over time so some areas aren't mapped exactly to what is outlined below but I am working on upgrading all of those at the moment. For the moment being I have written all of them below:
+This folder contains a formalization of the system and standards I map to, I reference to this in multiple other places so I have written it down here for reference. When mapping, I use a pass system, where each pass contains increasing levels of detail and information density. The following are the criteria I have for each pass at the moment, these will likely change a bit over time if my opinions change, though I will try to minimize the changes once this document reaches version `1.0.0`. It is important to note that my standards have changed over time so some areas aren't mapped exactly to what is outlined below but I am working on upgrading all of those at the moment. For the moment being I have written all of them in this document but plan to split this up soon:
 
 ## roads pass 1:
 
  - Geometry:
-     - TODO (if there are multiple carriageways they should be separate ways, even if it a small speed island). ~
+     - TODO (if there are multiple carriageways they should be separate ways, even if even if what is seperating them is a small speed island). ~
  - Vertices:
-     - All stop signs mapped (that are on street side imagery available in the area) tagged as `highway=stop` with a direction and always mapped at the stop lines, even when all directions have a stop.
-     - All yield signs mapped (that are on street side imagery available in the area) tagged as `highway=give_way` with a direction and always mapped at the stop lines, even when all directions have a yield.
-     - All traffic signals mapped (that are on street side imagery available in the area) tagged as `highway=traffic_signals` with a direction and always mapped at the stop lines, even when all directions have a traffic signal. `traffic_signals=*` should also be tagged. 
+     - All stop signs should be mapped (that are on street side imagery available in the area) tagged as `highway=stop` with a direction and always mapped at the stop lines, even when all directions have a stop.
+     - All yield signs should be mapped (that are on street side imagery available in the area) tagged as `highway=give_way` with a direction and always mapped at the stop lines, even when all directions have a yield.
+     - All traffic signals should be mapped (that are on street side imagery available in the area) tagged as `highway=traffic_signals` with a direction and always mapped at the stop lines, even when all directions have a traffic signal. `traffic_signals=*` should also be tagged. 
 	- All turning circles (`highway=turning_circle`) and turning loops (`highway=turning_loop`) are mapped along with `turning_circle=*` for turning circles.
 	- All `noexit`'s should be mapped with the exception of service roads, though as meany of those should be mapped as possible.
 	- Most traffic calming features should be mapped, though not all need to be, basically if you see one add it, but if you miss some it isn't a big deal.
 	- ~
  - Tagging:
-     - `surface=*` should be fully mapped on all but service roads by the end of the pass.
-	- `lanes=*` should be fully mapped on all but service roads by the end of the pass. 
+     - `surface=*` should be fully mapped on all roads except service roads by the end of the pass.
+	- `lanes=*` should be fully mapped on all roads except service roads by the end of the pass. 
 	- While `hazard=*` does no need to be fully mapped by the end of the first pass, work should be started on it.
 	- As with `hazard=*`, `maxspeed=*` (and other speed/weight etc. limits) is not fully required for pass 1 but should be started when noticed on street side imagery and/or survey.
 	- All names that you can find should be mapped (from TIGER and other sources) when available, though they aren't always available.
 	- All bridges and tunnels should be mapped in the area.
-	- All roundabouts should have the `junction=roundabout` tag along with `junction=circular` for circular junctions where traffic entering does not yield to traffic inside. 
-	- When applicable access tags should be mapped (like for private facilities)
+	- All roundabouts should should be mapped as seerate geoemtry and have the `junction=roundabout` tag along with `junction=circular` for circular junctions where traffic entering does not yield to traffic inside. 
+	- When applicable access tags should be mapped (like for private facilities).
 	- ~ 
 
 ## roads pass 2:
 
  - Geometry:
-     - All stop lines should be mapped (`road_marking=stop_line`) along with `stroke=*`
+     - All stop lines should be mapped (`road_marking=stop_line`) along with `stroke=*`.
 	- ~
  - Vertices/Nodes:
      - All `noexit`'s should be mapped, including service roads.
@@ -45,10 +45,10 @@ This folder contains a formalization of the system and standards I map to, I ref
 	- All directional lanes should be tagged (`lanes:backward`, `forward` and `both_ways`) should be mapped.
 	- All `turn:lanes` should be mapped, including directional `turn:lanes`.
 	- All other lane based tagging should be mapped (like `change:lanes` and `bicycle:lanes` etc.). 
-	- All roads should have whether or not they are lit (`lit=*`) tagged (from streetside imagery or survey).
+	- All roads should have whether or not they are lit (`lit=*`) tagged (from streetside imagery and/or survey).
 	- `hazard=*` is fully mapped.
 	- `maxspeed=*` is fully mapped (and other speed/weight etc. limits).
-	- Most roads should have a `type=street` relation that links them to other surrounding infra that is associated with the perticular road (basically all roads that have sidewalks along them should have a street relation including the road and its associated sidewalks and other elements)
+	- Most roads should have a `type=street` relation that links them to other surrounding infra that is associated with the perticular road (basically all roads that have sidewalks along them should have a street relation including the road and its associated sidewalks and other elements).
 	- ~ 
 
 ## roads pass 3:
@@ -80,11 +80,11 @@ I am likely not going to go fully to this level of detail any time soon in Miami
 	- All barriers (like bollards) should be mapped.
 	- ~
  - Tagging:
-	- All `footway=*` tags should be mapped except for `footway=residential`, though work on this can be started in this pass. 
+	- All `footway=*` tags should be mapped except for `footway=residential`, though work on the latter can be started in this pass. 
 	- All `surface=*` tags should be mapped.
 	- When applicable access tags should be mapped (like for private facilities)
-	- For crossings on roads `crossing=*` should always be tagged, either as `uncontrolled` or `traffic_signals` (there are some rare cases where it can be `no` but I haven't come across any in Miami Dade as of yet).
-	- For crossings all `crossing:markings=*` should be mapped and if there are markings ar available (with a few rare exceptions) the values should be something more specific than `yes`.
+	- For crossings on roads `crossing=*` should always be tagged, either as `unmarked`, `uncontrolled` or `traffic_signals` (there are some rare cases where it can be `no` but I haven't come across any in Miami Dade as of yet).
+	- For crossings all `crossing:markings=*` should be mapped and if there are markings the values should be something more specific than `yes` (with a few rare exceptions).
 	- When you notice that a crossing is signed tag it as `crossing:signed=*` though it isn't required that all such tags be mapped by the end of the first pass, though ideally most are.
 	- Along the same lines as with `crossing:signed=*` most `traffic_signals:countdown=yes` should be mapped by the end of the first pass. 
 	- When a RRFB is noticed at a crossing it should be tagged as `flashing_lights=*` + `crossing:signed=*` + `crossing_ref=rrfb`, most of these should be mapped by the first pass but not necessarily all. 
@@ -93,7 +93,7 @@ I am likely not going to go fully to this level of detail any time soon in Miami
 	- Where possible map/tag `footway=path` (its ok if some of these are just tagged as `highway=footway` with no other tags).
 	- All road based sidewalk tagging should be in place (though this is done at the end once the ways have been mapped separately).
 	- For all staircases `incline=*` should be tagged.
-	- For all `handrail=*` stair cases.
+	- For all stair cases `handrail=*` shoulod be tagged.
 	- Where applicable `level=*` should be tagged. 
 	- ~ 
 
@@ -101,6 +101,7 @@ I am likely not going to go fully to this level of detail any time soon in Miami
 
  - Geometry:
 	- Where ever there is a ramp split out a way and add `incline-*`, and more generally where ever there is an incline or of note, split it out and add the tag.
+	- for all crossings mapped `barrier=kerb` + `kerb=*` should be mapped on vertices at the end of crossings.
 	- ~
  - Vertices/Nodes:
 	- All kerb vertexes should be mapped along with `kerb=*`
