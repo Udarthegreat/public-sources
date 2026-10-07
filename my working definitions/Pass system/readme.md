@@ -6,7 +6,7 @@ note: very much WIP at the moment
 
 # Intro:
 
-This folder contains a formalization of the system and standards I map to, I reference to this in multiple other places so I have written it down here for reference. When mapping, I use a pass system, where each pass contains increasing levels of detail and information density. The following are the criteria I have for each pass at the moment, these will likely change a bit over time if my opinions change, though I will try to minimize the changes once this document reaches version `1.0.0`. It is important to note that my standards have changed over time so some areas aren't mapped exactly to what is outlined below but I am working on upgrading all of those at the moment. In this document when I say “all” that means that every way/node that can have that tag for that category of features should have that tag for the pass to be considered complete. “When applicable” means the same thing as “all” except that these tags have a value that doesn’t make sense to tag, for example it doesn’t really make sense to tag `noexit=no` so these tags should be tagged in every case where it makes sense to tag them. “Start on” means that you should tag these tags in the pass but you do not have to be thorough in finding them, for example in pass 1 if you see a speed limit sign along a road on street level imagery when looking for something else that is required add the tag but it is ok if some road segments do not have their maxspeed tagged by the end of the pass. For the moment, I have written all of them in this document but plan to split this up soon:
+This folder contains a formalization of the system and standards I map to, I reference to this in multiple other places so I have written it down here for reference. When mapping, I use a pass system, where each pass contains increasing levels of detail and information density. The following are the criteria I have for each pass at the moment, these will likely change a bit over time if my opinions change, though I will try to minimize the changes once this document reaches version `1.0.0`. It is important to note that my standards have changed over time so some areas aren't mapped exactly to what is outlined below but I am working on upgrading all of those at the moment. In this document when I say “all” that means that every way/node that can have that tag for that category of features should have that tag for the pass to be considered complete. “When applicable” means the same thing as “all” except that these tags have a value that doesn’t make sense to tag, for example it doesn’t really make sense to tag `noexit=no` so these tags should be tagged in every case where it makes sense to tag them. “Start on” means that you should tag these tags in the pass but you do not have to be thorough in finding them, for example in pass 1 if you see a speed limit sign along a road on street level imagery when looking for something else that is required add the tag but it is ok if some road segments do not have their max-speed tagged by the end of the pass. For the moment, I have written all of them in this document but plan to split this up soon:
 
 ## roads pass 1:
 
@@ -101,7 +101,7 @@ I am likely not going to go fully to this level of detail any time soon in Miami
 	- Start on tagging `footway=path` (its ok if some of these are just tagged as `highway=footway` with no other tags).
 	- All road-based sidewalk tagging should be in place (though this is done at the end once all the sidewalk ways along a road have been mapped separately).
 	- For all staircases `incline=*` (`up` or `down` not a percent) should be tagged.
-	- For staircases start on `handrail=*` should be tagged.
+	- For staircases start on `handrail=*`.
 	- For staircases start on `step_count=*`.
 	- Where applicable `level=*` should be tagged. 
 	- Where applicable `conveying=*`.
@@ -122,7 +122,7 @@ I am likely not going to go fully to this level of detail any time soon in Miami
 	- All `traffic_signals:countdown=yes`should be mapped/tagged.
 	- All RRFB's should be found and tagged as `flashing_lights=*` + `crossing:signed=*` + `crossing_ref=rrfb`.
 	- Where applicable `crossing:continuous=yes` should be mapped/tagged.
-	- All tactilre paving (including primitive) should be tagged.
+	- All tactile paving (including primitive) should be tagged.
 	- ALL `lit=*` should be tagged.
 	- For all signalized crossings `button_operated=*` should be tagged.
 	- All `flashing_lights=*` should be tagged.
@@ -131,7 +131,7 @@ I am likely not going to go fully to this level of detail any time soon in Miami
 	- On staircases all `tactile_paving=*` (`yes`, `no`, `primitive`).
 	- On staircases all `ramp=*`.
 	- On staircases `flat_steps=*` should be tagged where applicable.
-	- All ramps that have a handail should be tagged with `handrail=*`.
+	- All ramps that have a handrail should be tagged with `handrail=*`.
 	- ~
 
 ## pedestrian pass 3:
