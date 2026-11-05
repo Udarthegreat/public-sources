@@ -867,7 +867,7 @@
 			"properties": {
 				"ref": "13",
 				"complete": "false",
-				"complete:percent": "30"
+				"complete:percent": "99"
 			},
 			"geometry": {
 				"coordinates": [
@@ -907,7 +907,7 @@
 			"properties": {
 				"ref": "14",
 				"complete": "false",
-				"complete:percent": "10"
+				"complete:percent": "99"
 			},
 			"geometry": {
 				"coordinates": [
