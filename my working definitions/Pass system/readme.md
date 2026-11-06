@@ -12,6 +12,8 @@ This folder contains a formalization of the system and standards I map to, I ref
 
 ### roads pass 1:
 
+Roads pass 1 is the first pass to be completed, it can be done at the same time as the first pedestrian pass but road alignment fixes should be done before adding pedestrian features (especially crossings).
+
  - Geometry:
      - TODO: add description (if there are multiple carriageways they should be separate ways, even if what is separating them is a small speed island). ~
  - Vertices:
@@ -37,6 +39,8 @@ The above applies to all roads except parking lots tho get started on those in t
 
 ### roads pass 2:
 
+This should obviously be started after roads pass 1, but it ideally is also started after pedestrian pass 1.
+
  - Geometry:
      - All stop lines should be mapped (`road_marking=stop_line`) along with `stroke=*`.
 	- ~
@@ -61,6 +65,8 @@ In pass 2 all service roads should be mapped to the same level of detail as othe
 
 ### roads pass 3:
 
+This pass should be started at the same time as the Fourth pedestrian pass as they both involve area based mapping.
+
 I am likely not going to go fully to this level of detail any time soon in Miami-Dade County with the exception of a few specific sites.
 
  - Geometry:
@@ -75,6 +81,8 @@ I am likely not going to go fully to this level of detail any time soon in Miami
 ## pedestrian:
 
 ### pedestrian pass 1:
+
+The first pedestrian pass can be done at the same time as the first road pass but road alignments should be complete before starting, I would recommend though doing this after the first road pass. 
 
  - Geometry:
 	- All sidewalks must be mapped separately.
@@ -121,6 +129,8 @@ I am likely not going to go fully to this level of detail any time soon in Miami
 
 ### pedestrian pass 2:
 
+This pass should be started after the first pedestrian pass, and can be done at the same time as the second road pass though not it does not need to be. 
+
  - Geometry:
 	- Wherever there is a ramp split out a way and add `incline-*`, and more generally wherever there is an incline or of note, split it out and add the tag.
 	- ~
@@ -152,6 +162,8 @@ I am likely not going to go fully to this level of detail any time soon in Miami
 
 ### pedestrian pass 3:
 
+This pass should be started after the second pedestrian pass, and can be done at the same time as the second road pass though not it does not need to be.
+
  - Geometry:
 	- ~
  - Vertices/Nodes:
@@ -176,6 +188,8 @@ I am likely not going to go fully to this level of detail any time soon in Miami
 	- ~
 
 ### pedestrian pass 4: 
+
+This pass should be started and done at the same time as the third road pass. 
 
  - Geometry:
 	- Full area-based mapping of pedestrian infra, using `area:highway=footway`.
