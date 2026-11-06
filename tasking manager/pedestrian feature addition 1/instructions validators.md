@@ -11,17 +11,19 @@ Below are my guidelines for how I would like the pedestrian features in the area
 
 ## Imagery sources to be used
 
-At the beginning of the project it was recommended that "Bing Maps Aerial" be used as the main aerial imagery in this area, that has now changed. At the around beginning of 2026 "Esri World Imagery" updated, it is mostly the same as the 2025 imagery from the county. The "Bing Maps Aerial" is still a good source though so you can still check against it, just know that there has been construction between the bing and esri so the bing may be out of date.  a rough description of the this area with extremely high tree cover can be found in the following [geojson](/tasking%20manager/pedestrian%20feature%20addition%201/heavy%20tree%20cover.geojson) file, if you feel like it is to large and should be expanded feel free to reach out and I will change its shape if need be. The "Miami-Dade County Orthoimagery (Latest)" imagery is also decently good and it may be updated in the future with the new 2025 imagery from the county but at the moment it uses the 2024 imagery. The "Bing Streetside" imagery is another good source of info along with the Mapillary Traffic Signs and Map Features, though ensure that you check the Mapillary Traffic Signs and Map Features against Bing Streetside if they seem at all fishy and or conflict with the already mapped features in the area as the Bing Streetside is newer generally. As previously mentioned there is new 2025 imagery from the county (that is now the same as the esri imagery) but it is not on the same url as the existing "Miami-Dade County Orthoimagery (Latest)" imagery, you can add it to iD as a custom imagery url and even to JOSM. For iD you paste the following WMS url into the custom imagery box in iD:
+At the beginning of the project it was recommended that "Bing Maps Aerial" be used as the main aerial imagery in this area, that has now changed. At the around beginning of 2026 "Esri World Imagery" updated, it is mostly the same as the 2025 imagery from the county. The "Bing Maps Aerial" is still a good source though so you can still check against it, just know that there has been construction between the bing and esri so the bing may be out of date. There is also an area that has really high tree cover where because the bing is lower resolution than the esri features under the trees are more likely to get lost in the noise on the bing making them harder to find in tat area so the esri is recommended in that area. A rough description of the this area with extremely high tree cover can be found in the following [geojson](/tasking%20manager/pedestrian%20feature%20addition%201/heavy%20tree%20cover.geojson) file, if you feel like its size/shape is incorrect and should be changed feel free to reach out and I will change its shape if need be. There is also new imagery from the County for 2026 but has to be loaded in iD as a custom source using the following source:
 
 ```text
-https://imageserverintra.miamidade.gov/arcgis/rest/services/Woolpert2025/ImageServer/exportImage?f=image&bbox={bbox}&bboxSR={wkid}&imageSR={wkid}&size={width},{height}
+https://imageserverintra.miamidade.gov/arcgis/rest/services/Woolpert2026/ImageServer/exportImage?f=image&bbox={bbox}&bboxSR={wkid}&imageSR={wkid}&size={width},{height}
 ```
 
 For JOSM use the following GetCapabilities url:
 
 ```text
-https://imageserverintra.miamidade.gov/arcgis/services/Woolpert2025/ImageServer/WMSServer?request=GetCapabilities&service=WMS
+https://imageserverintra.miamidade.gov/arcgis/services/Woolpert2026/ImageServer/WMSServer?request=GetCapabilities&service=WMS
 ```
+
+This new imagery from the county should be checked against in case any alignments are out of date due to construction between the 2025 and 2026 imagery to ensure alignments are correct. The "Bing Streetside" imagery is another good source of info along with the Mapillary Traffic Signs and Map Features, though ensure that you check the Mapillary Traffic Signs and Map Features against Bing Streetside if they seem at all fishy and or conflict with the already mapped features in the area as the Bing Streetside is newer generally (the Bing streetside is from the 2020's (mostly 2022 in this area) generally and the Mapillary is generally from 2015). 
 
 ## Footways:
 
