@@ -1,0 +1,5 @@
+
+# About:
+
+This folder contains various images I have taken over time that I want to make public but am not uploading to streetside imagery platforms like Mapillary. Within this folder there are two broad categories of images, and thus two folders (might expand in the future) the first is images that serve as examples of some kind of feature that can be used as example of how best to map said features and second is images that show some real things as it was that I took while surveying but either there are already other example images of it in the example images directory, it is not all that special or for some other reason I did not think it fit in the examples directory but I still think it is important to share (like if I mapped the feature and I want to document why I tagged things the way I did).
+All images in this directory unless otherwise specified should be considered CC0, I have not decided on licenses for some of the other directories in the root but for this one I would like to make these CC0. 
